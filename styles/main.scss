@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #5a5a5a;
+}
+.project {
+  width: 90vw;
+  background-image: linear-gradient(to right, #00b09b, #96c93d);
+  border-radius: 1rem 1rem 0 0;
+  display: flex;
+  flex-direction: column;
+  max-width: 30rem;
+}
+
+.project_info {
+  color: #ffffff;
+  padding: 1rem;
+
+  &_title {
+    margin-bottom: 1.5rem;
+  }
+  &_subtitle {
+    margin-bottom: 1.5rem;
+  }
+}
+.project_form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+@media (min-width: 992px) {
+  .project {
+    flex-direction: row;
+    max-width: 50rem;
+  }
+}
