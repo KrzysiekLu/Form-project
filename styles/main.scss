@@ -15,17 +15,19 @@ body {
 }
 .project {
   width: 90vw;
-  background-image: linear-gradient(to right, #00b09b, #96c93d);
   border-radius: 1rem 1rem 0 0;
   display: flex;
   flex-direction: column;
   max-width: 30rem;
+  overflow: hidden;
+  position: relative;
 }
 
 .project_info {
   color: #ffffff;
   padding: 1rem;
-
+  background-image: linear-gradient(to right, #00b09b, #96c93d);
+  z-index: 1;
   &_title {
     margin-bottom: 1.5rem;
   }
@@ -37,10 +39,30 @@ body {
   display: flex;
   flex-direction: column;
   padding: 2rem;
+  background: #222;
+  color: #ffffff;
+  transition: 0.5s all ease;
+  transform: translateY(-100%);
+  opacity: 0;
+  position: absolute;
 }
 @media (min-width: 992px) {
   .project {
     flex-direction: row;
     max-width: 50rem;
+  }
+  .project_form {
+    transform: translateX(-100%);
+  }
+}
+.active-form {
+  transform: translateY(0);
+  opacity: 1;
+  position: static;
+  width: auto;
+}
+@media (min-width: 992px) {
+  .active-form {
+    transform: translateX(0);
   }
 }

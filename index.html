@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/main.css" />
+    <script src="scripts/main.js" defer></script>
     <title>Document</title>
   </head>
   <body>
@@ -19,8 +20,28 @@
           directly to email or share them in the comments.
           <span>Dont worry. you dont need to put true data</span>
         </p>
+        <div class="sitch-form">
+          <button id="log-btn" class="switch-form_btn">Login</button>
+          <button id="sign-btn" class="switch-form_btn">Sign up</button>
+        </div>
       </div>
-      <form class="project_form" action="post">
+
+      <form class="project_form register-form active-form" action="">
+        <h3>Sign up</h3>
+        <label for="name">Name</label>
+        <input type="text" />
+        <label for="mail">E-mail</label>
+        <input type="email" />
+        <label for="phone">phone</label>
+        <input type="tel" />
+        <label for="type">Who are you</label>
+        <select name="type" id="type">
+          <option value="Random person">Random person</option>
+          <option value="recriuter">Reciuter</option>
+        </select>
+      </form>
+      <form class="project_form log-form" action="">
+        <h3>Sign up</h3>
         <label for="name">Name</label>
         <input type="text" />
         <label for="mail">E-mail</label>
